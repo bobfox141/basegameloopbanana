@@ -8,7 +8,10 @@ class GameWindow < Gosu::Window
     @message = Gosu::Image.from_text(self, "Hello Steve!!!", Gosu.default_font_name, 30)
   end
 
-  def button_down
+  def button_down(button)
+    case button
+      when Gosu::KbEscape then close
+    end
     
   end
   
